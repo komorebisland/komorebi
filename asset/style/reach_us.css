@@ -1,0 +1,27 @@
+.svgpath {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    /* visibility: hidden; */
+    width: 20px;
+    height: 20px;
+
+}
+
+#mongo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+/* #mongo_container, #dirigibile_container, #deltaplano_container {
+    display: flex;
+    justify-content: center;
+} */
+
+#mongo_container img, #dirigibile_container img, #deltaplano_container img {
+    /* max-width: 80%; */
+}
