@@ -1,0 +1,38 @@
+.means_of_transport .image_wrapper {
+    background-image: url("../images/reach_us/Sky.png");
+    /* background-size: contain; */
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+}
+
+.transport_carousel_wrapper {
+    overflow: hidden;
+}
+
+.transport_carousel_wrapper * {
+    box-sizing: border-box;
+}
+
+.transport_carousel_wrapper .means_of_transport {
+    transform-style: preserve-3d;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.transport_carousel_wrapper .means_of_transport.initial,
+.transport_carousel_wrapper .means_of_transport.active {
+    opacity: 1;
+    height: auto;
+    position: relative;
+    z-index: 900;
+}
+@media (min-width: 992px) {
+    .transport_carousel_wrapper .means_of_transport {
+        opacity: 1;
+        height: auto;
+    }
+}

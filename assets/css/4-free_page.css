@@ -1,0 +1,77 @@
+
+.alloggi {
+    background-image: url("../images/booking/BGAlloggi.jpg");
+    border-radius: 5px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.esperienze {
+    background-image: url("../images/booking/BGEsperienze.jpg");
+    border-radius: 5px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.house_service {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 55px;
+}
+
+.house_service img {
+    filter: invert(21%) sepia(39%) saturate(2993%) hue-rotate(173deg) brightness(97%) contrast(98%);
+}
+
+
+.booking_types .image_wrapper {
+    border-radius: var(--komorebi-border-radius);
+    height: 85px;
+}
+
+.card_img {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 776px) {
+    .card_house_wrapper {
+        height: 340px;
+        flex-direction: row;
+    }
+
+    .card_img {
+        max-height: none;
+        object-fit: cover;
+        width: 277.6px;
+        height: 340px;
+    }
+}
+
+@media (min-width: 992px) {
+    .booking_types .image_wrapper {
+        height: 300px;
+    }
+
+    .swiper-slide {
+        flex-shrink: unset;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card_house_wrapper {
+        height: 470px;
+    }
+
+    .card_img {
+        max-height: none;
+        object-fit: cover;
+        width: 490px;
+        height: 470px;
+    }
+}

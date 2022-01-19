@@ -1,0 +1,39 @@
+/* -------------------------------------------------------------------------- */
+/*                               Esplora l'isola                              */
+/* -------------------------------------------------------------------------- */
+#gallery-explore {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carousel .carousel-item {
+    height: 280px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 280px;
+}
+
+
+@media (min-width: 768px) {
+    .carousel .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-item img {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel .carousel-item {
+        height: 500px;
+    }
+
+    .carousel-item img {
+        max-height: 500px;
+    }
+}
