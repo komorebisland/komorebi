@@ -584,7 +584,7 @@ header .logo {
 }
 
 
-@media (min-width: 776px) {
+@media (min-width: 768px) {
     .containerKomorebi {
         width: calc(100vw - 80px);
         max-width: 1920px;
