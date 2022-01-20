@@ -1,5 +1,5 @@
 
-.alloggi {
+#houses-section-navigator {
     background-image: url("../images/booking/BGAlloggi.jpg");
     border-radius: 5px;
     margin-top: 30px;
@@ -7,7 +7,7 @@
     background-position: center;
 }
 
-.esperienze {
+#experiences-section-navigator {
     background-image: url("../images/booking/BGEsperienze.jpg");
     border-radius: 5px;
     margin-top: 30px;
@@ -40,6 +40,11 @@
 }
 
 @media (min-width: 776px) {
+    .booking_types .image_wrapper {
+        border-radius: var(--komorebi-border-radius);
+        height: 240px;
+    }
+    
     .card_house_wrapper {
         height: 340px;
         flex-direction: row;

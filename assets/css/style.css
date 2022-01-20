@@ -46,20 +46,24 @@ html, body {
 
 
 
-.dropdown-item{
+.dropdown-item {
     color: var(--bluNavy);
 }
-.dropdown-menu{
+
+.dropdown-menu {
     background-color: var(--resina);
 }
+
 .dropdown-item.active {
     background-color: var(--resina);
     color: var(--verdeForesta);
 }
+
 .dropdown-item:focus, .dropdown-item:hover {
     color: var(--verdeForesta);
     background-color: var(--resina);
 }
+
 .card {
     border: none;
 }
@@ -159,36 +163,6 @@ h3 {
     letter-spacing: 0.02rem;
 }
 
-.subtitle {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-}
-
-
-.main_text {
-    padding-top: 50px;
-    margin-bottom: 16px;
-}
-
-.main_text p, .intro-big-text {
-    font-family: 'Hearing', sans-serif;
-    color: var(--bluNavy);
-}
-
-.main_text p:nth-child(2), .main_text p:nth-child(3) {
-    font-size: 20px;
-    /* margin: 0; */
-}
-
-.main_text .intro-big-text {
-    font-size: 70px;
-    letter-spacing: 0.07rem;
-}
-
-.tree_price {
-    font-size: 24px;
-    color: var(--resina);
-}
 
 p {
     font-size: 16px;
@@ -199,6 +173,7 @@ p {
     color: var(--gordonsGreen);
     margin: 0px;
 }
+
 
 /* -------------------------------------------------------------------------- */
 /*                                 Text colors                                */
@@ -250,22 +225,20 @@ p {
     position: relative;
 }
 
-.text-icon-map {
-    font-size: 24px;
-    color: var(--verdeForesta);
-    font-weight: bold;
-}
-
-
-header {
-    box-shadow: 0px 4px 4px rgba(5, 10, 4, 0.1);
-    /* filter: drop-shadow(0px 4px 4px rgba(5, 10, 4, 0.1)); */
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+/* TODO fare come id? */
+.icon-menu-mobile {
+    height: 30px;
+    filter: invert(100%) sepia(15%) saturate(487%) hue-rotate(45deg) brightness(100%) contrast(95%);
 }
 
 #btn_menu_open {
     filter: invert(13%) sepia(51%) saturate(6978%) hue-rotate(186deg) brightness(95%) contrast(98%);
 }
 
+/* Overlay bg visi */
 .overlay {
     display: none;
     position: fixed;
@@ -273,6 +246,8 @@ header {
     height: 100vh;
     background: rgba(255, 255, 255, .6);
     z-index: 1;
+
+    /* transparent */
     opacity: 0;
     top: 0;
     z-index: 998;
@@ -281,13 +256,14 @@ header {
 
 .overlay.active {
     display: block;
+    /* visible */
     opacity: 1;
 }
 
 header {
+    box-shadow: 0px 4px 4px rgba(5, 10, 4, 0.1);
     top: 0;
     left: 0;
-    /* padding: 30px; */
     display: flex;
     height: 50px;
     width: 100%;
@@ -324,21 +300,6 @@ header .logo {
     animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.homepage__wrapper {
-    height: 100vh;
-    width: 100vw;
-}
-
-.home_bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    /* z-index: 996; */
-    right: 0;
-    background-image: url('../images/Mong.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .mobile_menu_wrapper {
     margin-top: 60px;
@@ -386,21 +347,12 @@ header .logo {
     border-radius: 0 1px 1px 0;
 }
 
-#collapseVivereAKomorebi>ul>li span:nth-child(1) {
-    margin-left: 20px;
-}
-
 .mobile_menu_ul>li.active>a>span:nth-child(1) {
     background: var(--melaVerde);
 }
 
-.icon-menu-mobile {
-    height: 30px;
-    filter: invert(100%) sepia(15%) saturate(487%) hue-rotate(45deg) brightness(100%) contrast(95%);
-}
-
 /* -------------------------------------------------------------------------- */
-/*                                 Animazioni                                 */
+/*                      Animazioni apertura/chiusura menu                     */
 /* -------------------------------------------------------------------------- */
 
 @keyframes slide-left {
@@ -427,7 +379,9 @@ header .logo {
     }
 }
 
-#alberelli {
+
+/* Alberi */
+#saplings {
     z-index: 997;
     background-image: url('../images/skyline.png');
     background-repeat: repeat-x;
@@ -450,7 +404,7 @@ header .logo {
     color: var(--resina);
     font-size: 20px;
     text-align: center;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     margin-top: 40px;
 }
 
@@ -482,7 +436,7 @@ header .logo {
     color: var(--resina);
     font-weight: 200;
     /* font-size: 12px; */
-    
+
 }
 
 .footer .separator {
@@ -515,7 +469,7 @@ header .logo {
 
 
 /* Heart per adopt e booking */
-.card_heart {
+.card-heart {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -553,6 +507,10 @@ header .logo {
     background-image: url("../images/source/hero.png");
 }
 
+.hero_img_desktop_wrapper .hero_overlay {
+    width: 80vw;
+}
+
 .hero_explore .hero_overlay, .hero_img .hero_overlay {
     background: rgba(77, 191, 202, 0.8);
     box-shadow: 4px 4px 10px rgba(5, 10, 4, 0.1);
@@ -574,7 +532,7 @@ header .logo {
 .card_1_img {
     width: 100%;
     height: 250px;
-    background-color: #f2d4d4;
+    background-color: var(--melaVerde);
     border-radius: var(--komorebi-border-radius);
     overflow: hidden;
 
@@ -606,13 +564,6 @@ header .logo {
     /* min-height: 322px; */
 }
 
-.card_1_title {
-    color: var(--verdeForesta);
-}
-
-.card_1_txt {
-    display: none;
-}
 
 .fauna_card_wrapper .card_1_txt_wrapper {
     background-color: var(--verdeForesta);
@@ -627,27 +578,6 @@ header .logo {
     color: var(--resina);
 }
 
-
-.gallery_content {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    position: relative;
-}
-
-.gallery_arrow {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 3%;
-}
-
-.gallery_arrow img {
-    height: fit-content;
-}
 
 @media (min-width: 776px) {
     .containerKomorebi {
@@ -664,6 +594,7 @@ header .logo {
     h1 {
         font-size: 32px;
     }
+
     h2 {
         font-size: 24px;
     }
@@ -671,10 +602,6 @@ header .logo {
     /* -------------------------------------------------------------------------- */
     /*                               Footer Tablet                                */
     /* -------------------------------------------------------------------------- */
-    footer {
-        max-width: 100vw;
-    }
-
     .footer .section_title {
         font-size: 12px;
     }
@@ -714,21 +641,6 @@ header .logo {
         font-size: 20px;
     }
 
-    /* -------------------------------------------------------------------------- */
-    /*                                   0-home                                   */
-    /* -------------------------------------------------------------------------- */
-    .home_bg {
-        width: 58.333333%;
-    }
-
-    .main_text .intro-big-text {
-        font-size: calc(8rem + 7vw);
-        line-height: calc(3rem + 8vw);
-        /*Remove space below the text baseline*/
-        letter-spacing: 0.07rem;
-    }
-
-
     .hero_img .hero_overlay {
         background: rgba(77, 191, 202, 0.8);
         box-shadow: 4px 4px 10px rgba(5, 10, 4, 0.1);
@@ -754,9 +666,16 @@ header .logo {
 
     .hero_img_desktop_wrapper .hero_overlay {
         position: absolute;
-        right: 0;
         width: 70%;
         padding: 50px;
+    }
+
+    .hero_overlay--right {
+        right: 0;
+    }
+
+    .hero_overlay--left {
+        left: 0;
     }
 
     #li_servizi, .panel, #btn_menu_open, #btn_menu_close {
@@ -832,7 +751,7 @@ header .logo {
 
 
 
-    #alberelli {
+    #saplings {
         background-image: url('../images/skyline.png');
         background-repeat: repeat-x;
         height: 100px;
@@ -863,13 +782,7 @@ header .logo {
         text-align: start;
     }
 
-    .card_1_title {
-        display: none;
-    }
 
-    .card_1_txt {
-        display: block;
-    }
 
 }
 

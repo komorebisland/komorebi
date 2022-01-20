@@ -21,6 +21,19 @@ function isHidden(selector) {
   return ($(selector).css('display') == 'none' || $(selector).css("visibility") == "hidden");
 }
 
+$(".heart-icon").click(function() {
+  console.log($(this));
+  let currentFill = $(this).attr("data-fill");
+  if(currentFill == "empty") {
+    $(this).attr("src", "assets/icons/full-heart.png");
+    $(this).attr("data-fill", "full");
+  }
+  else if(currentFill == "full") {
+    $(this).attr("src", "assets/icons/empty-heart.png");
+    $(this).attr("data-fill", "empty");
+  }
+});
+
 $(".card_1_wrapper").click(function () {
   if (!isHidden('.card_1_txt')) {
     return;
@@ -133,12 +146,12 @@ overlay.click(() => {
 });
 
 $(document).scroll(() => {
-  if ($('#alberelli').offset().top + $('#alberelli').height()
+  if ($('#saplings').offset().top + $('#saplings').height()
     >= $('footer').offset().top) {
-    $('#alberelli').css({ "position": "absolute", "bottom": "-1px" });
+    $('#saplings').css({ "position": "absolute", "bottom": "-1px" });
   }
   if ($(document).scrollTop() + window.innerHeight < $('footer').offset().top) {
-    $('#alberelli').css('position', 'fixed'); // restore when you scroll up
+    $('#saplings').css('position', 'fixed'); // restore when you scroll up
   }
 });
 

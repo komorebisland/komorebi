@@ -5,6 +5,12 @@
 /* -------------------------------------------------------------------------- */
 /*                                    pin-over-map                            */
 /* -------------------------------------------------------------------------- */
+.text-icon-map {
+    font-size: 24px;
+    color: var(--verdeForesta);
+    font-weight: bold;
+}
+
 
 .map {
     width: 100%;
@@ -135,15 +141,14 @@
 }
 
 
-@media (min-width:992px) {
+@media (min-width:776px) {
     .map_section {
         display: flex;
-        flex-direction: row;
-        gap: 5vw;
+        flex-direction: column-reverse;
+        /* gap: 5vw; */
         align-items: flex-start;
         align-content: flex-start;
     }
-
     .icon-map div {
         display: flex;
         flex-direction: column;
@@ -159,13 +164,22 @@
     }
 
     .map-icon-wrapper .icon-map {
-        flex: 1 0 50%;
-
+        flex: 1 0 33.33%;
     }
 
     .icon-map .text-icon-map-description {
         width: 200%;
     }
+}
+@media (min-width:992px) {
+    .map_section {
+        flex-direction: row;
+        gap: 5vw;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+
 
     .map_section__intro_text {
         order: 2;
