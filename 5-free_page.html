@@ -16,8 +16,9 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/5-free_page.css">
 
-  <link href="assets/font/Hearing.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+  <link href="assets/font/Hearing.css" rel="preload" as="font">
+  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap"
+    rel="stylesheet" />
 
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -27,10 +28,10 @@
 <body>
   <header>
     <a href="0-home.html"><img class="logo" src="./assets/logo.png" alt="logo Komorebi"></a>
-    <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon">
+    <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
     <div class="menu menu--close" id="menu">
       <div id="btn_menu_close" class="d-flex justify-content-end p-3 pointer">
-        <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" />
+        <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" height="30" width="30" />
       </div>
       <div class="mobile_menu_wrapper">
         <ul class="mobile_menu_ul">
@@ -96,38 +97,49 @@
       <div class="swiper-wrapper row no-gutters">
         <div class="swiper-slide col-md-4 pr-3">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/baobab.jpg" class="card-img-top" alt="baobab">
+            <img class="card-img-top" sizes="(max-width: 570px) 100vw, 570px" srcset="
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_200.png 200w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_308.png 308w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_389.png 389w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_463.png 463w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_527.png 527w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_570.png 570w"
+              src="./assets/images/explore/baobab/baobab_go040a_c_scale,w_570.png" loading="lazy" alt="Baobab">
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Baobab</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: accoglienza
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 100</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide col-md-4 pr-3">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/eucalipto.jpg" class="card-img-top" alt="eucalipto">
+            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+              ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_200.jpg 200w,
+              ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_931.jpg 931w,
+              ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_1400.jpg 1400w"
+              src="./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_1400.jpg" alt="eucalipto">
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Eucalipto</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: protezione
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 75</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
@@ -135,19 +147,23 @@
 
         <div class="swiper-slide col-md-4">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/pino.jpg" class="card-img-top" alt="pino">
+            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_200.jpg 200w,
+                ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_948.jpg 948w,
+                ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_1400.jpg 1400w"
+              src="./assets/images/adopt/pino/pino_rkvmek_c_scale,w_1400.jpg" alt="pino">
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Pino</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: eternità
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 30</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
@@ -155,19 +171,25 @@
 
         <div class="swiper-slide col-md-4 pr-3">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/bamboo.jpg" class="card-img-top" alt="bamboo">
+
+            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+            ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_200.jpg 200w,
+            ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_936.jpg 936w,
+            ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_1400.jpg 1400w"
+              src="./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_1400.jpg" alt="bamboo">
+            <!-- <img src="assets/images/adopt/bamboo.jpg" class="card-img-top" alt="bamboo"> -->
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Bamboo</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: nobiltà d'animo
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 50</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
@@ -175,19 +197,23 @@
 
         <div class="swiper-slide col-md-4 pr-3">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/acero.jpg" class="card-img-top" alt="acero">
+            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+            ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_200.jpg 200w,
+            ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_679.jpg 679w,
+            ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_1000.jpg 1400w"
+              src="./assets/images/adopt/acero/acero_aajmtl_c_scale,w_1000.jpg" alt="acero">
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Acero</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: modestia
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 50</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
@@ -195,19 +221,24 @@
 
         <div class="swiper-slide col-md-4">
           <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img src="assets/images/adopt/dracaena.jpeg" class="card-img-top" alt="dracaena">
+
+            <img class="card-img-top" sizes="(max-width: 1064px) 100vw, 1064px" srcset="
+            ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_200.jpg 200w,
+            ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_565.jpg 565w,
+            ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_1064.jpg 1064w"
+              src="./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_1064.jpg" alt="dracaena">
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Dracaena cinnabari</h2>
-                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart">
+                <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                  height="30" width="30">
               </div>
               <p class="card-text text-res" style="font-size: 12px; font-weight: 500;">
                 Significato: determinazione
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <p class="tree_price">€ 60</p>
-                <button class="btn btn-secondary" data-toggle="modal"
-                        data-target="#modal-adopt">ADOTTA</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
@@ -225,7 +256,7 @@
     <div class="containerKomorebi py-5">
       <div class="row no-gutters">
         <div class="footer_logo_wrapper col-12 col-lg-2 my-auto">
-          <img class="logo" src="./assets/logo.png" alt="">
+          <img class="logo" src="./assets/logo.png" alt="logo Komorebi">
           <p>KOMOREBI</p>
         </div>
         <div class="col-12 offset-lg-1 col-lg-9">
@@ -298,7 +329,6 @@
             style="right: 10px;top:10px;">
             <span aria-hidden="true" class="text-res">&times;</span>
           </button>
-
           <p class="w-75 text-res">Adozione completata!</p>
         </div>
       </div>

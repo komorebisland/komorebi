@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/1-city_description.css">
 
-    <link href="assets/font/Hearing.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <link href="assets/font/Hearing.css" rel="preload" as="font">
+    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
 
     <title>Komorebi</title>
 </head>
@@ -25,10 +25,10 @@
 <body>
     <header>
         <a href="0-home.html"><img class="logo" src="./assets/logo.png" alt="logo Komorebi"></a>
-        <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon">
+        <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
         <div class="menu menu--close" id="menu">
             <div id="btn_menu_close" class="d-flex justify-content-end p-3 pointer">
-                <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" />
+                <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" height="30" width="30" />
             </div>
             <div class="mobile_menu_wrapper">
                 <ul class="mobile_menu_ul">
@@ -134,7 +134,18 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="card_1_wrapper" data-name="baobab">
                         <div class="card_1_img">
-                            <img src="./assets/images/explore/baobab.png" alt="baobab">
+
+                            <img sizes="(max-width: 570px) 100vw, 570px" 
+                                srcset="
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_200.png 200w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_308.png 308w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_389.png 389w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_463.png 463w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_527.png 527w,
+                                    ./assets/images/explore/baobab/baobab_go040a_c_scale,w_570.png 570w"
+                                src="./assets/images/explore/baobab/baobab_go040a_c_scale,w_570.png"
+                                loading="lazy"
+                                alt="Baobab">
                         </div>
                         <div class="card_1_txt_wrapper">
                             <h2 class="card_1_title d-block d-lg-none text-vf">baobab</h2>
@@ -283,7 +294,7 @@
         <div class="containerKomorebi py-5">
             <div class="row no-gutters">
                 <div class="footer_logo_wrapper col-12 col-lg-2 my-auto">
-                    <img class="logo" src="./assets/logo.png" alt="">
+                    <img class="logo" src="./assets/logo.png" alt="logo Komorebi">
                     <p>KOMOREBI</p>
                 </div>
                 <div class="col-12 offset-lg-1 col-lg-9">
