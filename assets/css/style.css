@@ -3,7 +3,7 @@
     --gordonsGreen: #050a04;
     --bluNavy: #035376;
     --bluCeleste: #4dbfca;
-    --melaVerde: #aedc98;
+    --melaVerde: hsl(101, 49%, 73%);
     --verdeForesta: #47873e;
     --swiper-theme-color: #aedc98 !important;
     --komorebi-border-radius: 5px;
@@ -94,12 +94,17 @@ html, body {
     color: var(--verdeForesta);
 }
 
-.btn-secondary:hover, .btn-secondary:active {
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:not(:disabled):not(.disabled):active {
     background-color: var(--melaVerde);
     border-color: var(--melaVerde);
     color: var(--gordonsGreen);
 }
-
+.btn-secondary.focus, .btn-secondary:focus {
+    background-color: var(--melaVerde);
+    border-color: var(--melaVerde);
+    color: var(--gordonsGreen);
+    box-shadow: 0 0 0 0.2rem rgb(174, 220, 152 / 50%) !important;
+}
 .btn-info {
     background-color: var(--bluCeleste);
     border-color: var(--bluCeleste);
