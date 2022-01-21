@@ -39,7 +39,7 @@
     object-fit: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 776px) {
     .booking_types .image_wrapper {
         border-radius: var(--komorebi-border-radius);
         height: 240px;
