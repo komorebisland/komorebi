@@ -27,13 +27,13 @@
 <body>
     <header>
         <a href="0-home.html"><img class="logo" src="./assets/logo.png" title="Homepage" alt="logo Komorebi"></a>
-        <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
+        <img id="btn_menu_open" class="d-block d-lg-none" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
         <div class="menu menu--close" id="menu">
-            <div id="btn_menu_close" class="d-flex justify-content-end p-3 pointer">
+            <div id="btn_menu_close" class="d-flex d-lg-none justify-content-end p-3 pointer">
                 <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" height="30" width="30" />
             </div>
             <div class="mobile_menu_wrapper">
-                <ul class="mobile_menu_ul">
+                <ul class="mobile-menu-ul">
                     <li><a class="header-link" href="0-home.html"><span></span><span>Home</span></a></li>
                     <li><a class="header-link" href="1-city_description.html"><span></span><span>Esplora
                                 l'isola</span></a></li>
@@ -54,8 +54,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="sub_menu d-block d-lg-none" style="height: auto;">
-                        <ul class="mobile_menu_ul">
+                    <li class="sub-menu d-block d-lg-none" style="height: auto;">
+                        <ul class="mobile-menu-ul">
                             <li><a href="2-1-service_description.html"><span></span><span>La sorgente</span></a></li>
                             <li class="active"><a href="2-2-service_description.html"><span></span><span>Choose to
                                         reuse</span></a>
@@ -73,7 +73,7 @@
     </header>
 
 
-    <div class="containerKomorebi pb-tree min-vh-100">
+    <div class="container-komorebi pb-tree min-vh-100">
         <div class="map_section komorebi-mt">
 
             <div class="map_section__intro_text">
@@ -284,7 +284,7 @@
 
     <div class="overlay" id="overlay"></div>
     <footer class="footer">
-        <div class="containerKomorebi py-5">
+        <div class="container-komorebi py-5">
             <div class="row no-gutters">
                 <div class="footer_logo_wrapper col-12 col-lg-2 my-auto">
                     <img class="logo" src="./assets/logo.png" alt="logo Komorebi">
@@ -332,10 +332,10 @@
                                 <h5 class="section_title text-md-left">PRENOTA</h5>
                                 <ul class="list-unstyled">
                                     <li class="text-md-left mb-2">
-                                        <a href="4-free_page.html#section_alloggi">Dove soggiornare</a>
+                                        <a href="4-free_page.html#houses_section">Dove soggiornare</a>
                                     </li>
                                     <li class="text-md-left mb-2">
-                                        <a href="4-free_page.html#section_esperienze">Esperienze</a>
+                                        <a href="4-free_page.html#experiences_section">Esperienze</a>
                                     </li>
                                 </ul>
                             </div>

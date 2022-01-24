@@ -1,6 +1,23 @@
 /* -------------------------------------------------------------------------- */
 /*                               Esplora l'isola                              */
 /* -------------------------------------------------------------------------- */
+
+
+
+/* Opacità per mettere in risalto le frecce di navigazione della gallery */
+.carousel-control-prev {
+    background: -webkit-linear-gradient(left, rgba(5, 10, 4, 0.8) 0, transparent 90%);
+}
+
+.carousel-control-next {
+    background: -webkit-linear-gradient(right, rgba(5, 10, 4, 0.8) 0, transparent 90%);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+    width: 18%;
+}
+
 #gallery-explore {
     border-radius: 5px;
     overflow: hidden;
@@ -14,7 +31,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    max-height: 280px;
+    object-fit: none;
+    /* max-height: 280px; */
 }
 
 

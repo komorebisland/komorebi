@@ -60,10 +60,10 @@ function adjustPageItems() {
   if(width <= 992) {
     housesNavigator.addClass("pointer");
     $(housesNavigator).on("click", function() {
-      window.location.hash = "#section_alloggi";  
+      window.location.hash = "#houses_section";  
     });
     $(experiencesNavigator).on("click", function() {
-      window.location.hash = "#section_esperienze";  
+      window.location.hash = "#experiences_section";  
     });
   }
   else {

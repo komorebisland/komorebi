@@ -17,7 +17,8 @@
   <link href="assets/font/Hearing.css" rel="preload" as="font">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap"
+    rel="stylesheet" />
 
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -29,13 +30,14 @@
 <body>
   <header>
     <a href="0-home.html"><img class="logo" src="./assets/logo.png" title="Homepage" alt="logo Komorebi"></a>
-    <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
+    <img id="btn_menu_open" class="d-block d-lg-none" src="assets/icons/menu.svg" alt="Menu icon" height="30"
+      width="30" />
     <div class="menu menu--close" id="menu">
-      <div id="btn_menu_close" class="d-flex justify-content-end p-3 pointer">
+      <div id="btn_menu_close" class="d-flex d-lg-none justify-content-end p-3 pointer">
         <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" height="30" width="30" />
       </div>
       <div class="mobile_menu_wrapper">
-        <ul class="mobile_menu_ul">
+        <ul class="mobile-menu-ul">
           <li><a class="header-link" href="0-home.html"><span></span><span>Home</span></a></li>
           <li><a class="header-link" href="1-city_description.html"><span></span><span>Esplora l'isola</span></a></li>
           <li class="d-lg-none"><a class="header-link" href="2-services_descriptions.html"><span></span><span>Vivere a
@@ -54,8 +56,8 @@
               </div>
             </div>
           </li>
-          <li class="sub_menu d-block d-lg-none" style="height: auto;">
-            <ul class="mobile_menu_ul">
+          <li class="sub-menu d-block d-lg-none" style="height: auto;">
+            <ul class="mobile-menu-ul">
               <li><a href="2-1-service_description.html"><span></span><span>La sorgente</span></a></li>
               <li><a href="2-2-service_description.html"><span></span><span>Choose to reuse</span></a>
               </li>
@@ -71,7 +73,7 @@
   </header>
 
 
-  <div class="containerKomorebi pb-tree min-vh-100">
+  <div class="container-komorebi pb-tree min-vh-100">
     <div class="row no-gutters komorebi-mt">
       <div class="offset-0 offset-lg-1"></div>
       <div class="col-12 col-lg-11">
@@ -101,7 +103,7 @@
               <div class="image_wrapper d-flex justify-content-center align-items-center w-100">
                 <div style="background: rgba(241, 248, 240, 0.5); border-radius: 5px;" class="w-75 text-center p-3">
                   <h2 class="text-bn">Alloggi</h2>
-                  <a href="#section_alloggi" class="btn btn-info d-none d-md-inline-block">Mostra di più</a>
+                  <a href="#houses_section" class="btn btn-info d-none d-md-inline-block">Mostra di più</a>
                 </div>
               </div>
             </div>
@@ -111,7 +113,7 @@
               <div class="image_wrapper d-flex justify-content-center align-items-center w-100">
                 <div style="background: rgba(241, 248, 240, 0.5); border-radius: 5px;" class="w-75 text-center p-3">
                   <h2 class="text-vf">Esperienze</h2>
-                  <a href="#section_esperienze" class="btn btn-info d-none d-md-inline-block">Mostra di più</a>
+                  <a href="#experiences_section" class="btn btn-info d-none d-md-inline-block">Mostra di più</a>
                 </div>
               </div>
             </div>
@@ -121,22 +123,27 @@
     </div>
 
 
-    <div id="section_alloggi">
+    <div id="houses_section">
       <h2 class="text-vf" style="padding-top: 30px;">Alloggi</h2>
 
       <div class="swiper swiper1 komorebi-mt">
         <div class="swiper-wrapper row">
           <div class="swiper-slide house-swiper-slide col-md-12">
             <div class="card mb-4">
-              <div class="card_house_wrapper">
+              <div class="card-house-wrapper">
                 <div>
-                  <img src="assets/images/booking/alloggio1.jpg" class="card_img" alt="casa del pino">
+                  <img class="card_img" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                    ./assets/images/booking/houses/1/alloggio1_rm35ta_c_scale,w_200.jpg 200w,
+                    ./assets/images/booking/houses/1/alloggio1_rm35ta_c_scale,w_947.jpg 947w,
+                    ./assets/images/booking/houses/1/alloggio1_rm35ta_c_scale,w_1400.jpg 1400w"
+                    src="./assets/images/booking/houses/1/alloggio1_rm35ta_c_scale,w_1400.jpg" alt="Casa del pino">
                 </div>
                 <div class="card-body align-items-center d-flex justify-content-center bg-mv">
                   <div>
                     <div class="card-heart">
                       <h2 class="card-title text-vf">Casa del Pino</h2>
-                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                        height="30" width="30">
                     </div>
                     <div>
                       <img src="assets/images/booking/fullstar.png" alt="fullstar">
@@ -163,7 +170,7 @@
                       <div class="d-flex">
                         <div class="payment">
                           <p>da</p>
-                          <p style="font-size: 40px;">€60</p>
+                          <p class="price">€60</p>
                           <p>a notte</p>
                         </div>
                         <div class="house_service ml-5 d-none d-md-block">
@@ -183,15 +190,20 @@
 
           <div class="swiper-slide house-swiper-slide col-md-12">
             <div class="card mb-4">
-              <div class="card_house_wrapper">
+              <div class="card-house-wrapper">
                 <div>
-                  <img src="assets/images/booking/alloggio2.jpg" class="card_img" alt="casa-della-palma">
+                  <img class="card_img" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                        ./assets/images/booking/houses/2/alloggio2_sgygcf_c_scale,w_200.jpg 200w,
+                        ./assets/images/booking/houses/2/alloggio2_sgygcf_c_scale,w_967.jpg 967w,
+                        ./assets/images/booking/houses/2/alloggio2_sgygcf_c_scale,w_1400.jpg 1400w"
+                    src="./assets/images/booking/houses/2/alloggio2_sgygcf_c_scale,w_1400.jpg" alt="casa della palma">
                 </div>
                 <div class="card-body align-items-center d-flex justify-content-center bg-mv">
                   <div>
                     <div class="card-heart">
                       <h2 class="card-title text-vf">Casa della palma</h2>
-                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                        height="30" width="30">
                     </div>
                     <div>
                       <img src="assets/images/booking/fullstar.png" alt="fullstar">
@@ -218,7 +230,7 @@
                       <div class="d-flex">
                         <div class="payment">
                           <p>da</p>
-                          <p style="font-size: 40px;">€60</p>
+                          <p class="price">€60</p>
                           <p>a notte</p>
                         </div>
                         <div class="house_service ml-5 d-none d-md-block">
@@ -237,15 +249,20 @@
 
           <div class="swiper-slide house-swiper-slide col-md-12">
             <div class="card mb-4">
-              <div class="card_house_wrapper">
+              <div class="card-house-wrapper">
                 <div>
-                  <img src="assets/images/booking/alloggio3.jpg" class="card_img" alt="casa-del-muschio">
+                  <img class="card_img" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                    ./assets/images/booking/houses/3/alloggio3_rb0vnc_c_scale,w_200.jpg 200w,
+                    ./assets/images/booking/houses/3/alloggio3_rb0vnc_c_scale,w_962.jpg 962w,
+                    ./assets/images/booking/houses/3/alloggio3_rb0vnc_c_scale,w_1400.jpg 1400w"
+                    src="./assets/images/booking/houses/3/alloggio3_rb0vnc_c_scale,w_1400.jpg" alt="Casa del muschio">
                 </div>
                 <div class="card-body align-items-center d-flex justify-content-center bg-mv">
                   <div>
                     <div class="card-heart">
                       <h2 class="card-title text-vf">Casa del Muschio</h2>
-                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                        height="30" width="30">
                     </div>
                     <div>
                       <img src="assets/images/booking/fullstar.png" alt="fullstar">
@@ -272,7 +289,7 @@
                       <div class="d-flex">
                         <div class="payment">
                           <p>da</p>
-                          <p style="font-size: 40px;">€80</p>
+                          <p class="price">€80</p>
                           <p>a notte</p>
                         </div>
                         <div class="house_service ml-5 d-none d-md-block">
@@ -292,15 +309,20 @@
 
           <div class="swiper-slide house-swiper-slide col-md-12">
             <div class="card mb-4">
-              <div class="card_house_wrapper">
+              <div class="card-house-wrapper">
                 <div>
-                  <img src="assets/images/booking/alloggio4.jpg" class="card_img" alt="casa-dell-abete">
+                  <img class="card_img" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                  ./assets/images/booking/houses/4/alloggio4_hdqnsp_c_scale,w_200.jpg 200w,
+                  ./assets/images/booking/houses/4/alloggio4_hdqnsp_c_scale,w_948.jpg 948w,
+                  ./assets/images/booking/houses/4/alloggio4_hdqnsp_c_scale,w_1400.jpg 1400w"
+                    src="./assets/images/booking/houses/4/alloggio4_hdqnsp_c_scale,w_1400.jpg" alt="casa dell'abete">
                 </div>
                 <div class="card-body align-items-center d-flex justify-content-center bg-mv">
                   <div>
                     <div class="card-heart">
                       <h2 class="card-title text-vf">Casa dell'Abete</h2>
-                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                      <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                        height="30" width="30">
                     </div>
                     <div>
                       <img src="assets/images/booking/fullstar.png" alt="fullstar">
@@ -330,7 +352,7 @@
                       <div class="d-flex">
                         <div class="payment">
                           <p>da</p>
-                          <p style="font-size: 40px;">€65</p>
+                          <p class="price">€65</p>
                           <p>a notte</p>
                         </div>
                         <div class="house_service ml-5 d-none d-md-block">
@@ -354,7 +376,7 @@
     </div>
 
 
-    <div id="section_esperienze" style="padding-top: 30px;">
+    <div id="experiences_section" style="padding-top: 30px;">
       <h2 class="text-vf">Esperienze</h2>
       <div class="swiper swiper2 komorebi-mt">
         <div class="swiper-wrapper row no-gutters">
@@ -364,13 +386,14 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">MTB</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="d-flex">
                     <div class="payment">
                       <p class="text-res">a partire da</p>
-                      <p class="text-res" style="font-size: 40px;">€40</p>
+                      <p class="text-res price">€40</p>
                     </div>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
@@ -384,12 +407,13 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">Giro dell'isola in mongolfiera</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="payment">
                     <p class="text-res">a partire da</p>
-                    <p class="text-res" style="font-size: 40px;">€70</p>
+                    <p class="text-res price">€70</p>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
                 </div>
@@ -402,12 +426,13 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">Lezioni di botanica</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="payment">
                     <p class="text-res">a partire da</p>
-                    <p class="text-res" style="font-size: 40px;">€50</p>
+                    <p class="text-res price">€50</p>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
                 </div>
@@ -420,12 +445,13 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">Trekking</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="payment">
                     <p class="text-res">a partire da</p>
-                    <p class="text-res" style="font-size: 40px;">€40</p>
+                    <p class="text-res price">€40</p>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
                 </div>
@@ -439,12 +465,13 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">A pranzo dai Komorebiani</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="payment">
                     <p class="text-res">a partire da</p>
-                    <p class="text-res" style="font-size: 40px;">€40</p>
+                    <p class="text-res price">€40</p>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
                 </div>
@@ -458,12 +485,13 @@
               <div class="card-body bg-bc">
                 <div class="card-heart">
                   <h2 class="card-title text-res">Yoga tra le nuvole</h2>
-                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart" height="30" width="30">
+                  <img src="assets/icons/empty-heart.png" class="pointer heart-icon" data-fill="empty" alt="heart"
+                    height="30" width="30">
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                   <div class="payment">
                     <p class="text-res">a partire da</p>
-                    <p class="text-res" style="font-size: 40px;">€40</p>
+                    <p class="text-res price">€40</p>
                   </div>
                   <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-booking">Prenota</button>
                 </div>
@@ -498,7 +526,7 @@
   </div>
   <div class="overlay" id="overlay"></div>
   <footer class="footer">
-    <div class="containerKomorebi py-5">
+    <div class="container-komorebi py-5">
       <div class="row no-gutters">
         <div class="footer_logo_wrapper col-12 col-lg-2 my-auto">
           <img class="logo" src="./assets/logo.png" alt="logo Komorebi">
@@ -546,10 +574,10 @@
                 <h5 class="section_title text-md-left">PRENOTA</h5>
                 <ul class="list-unstyled">
                   <li class="text-md-left mb-2">
-                    <a href="4-free_page.html#section_alloggi">Dove soggiornare</a>
+                    <a href="4-free_page.html#houses_section">Dove soggiornare</a>
                   </li>
                   <li class="text-md-left mb-2">
-                    <a href="4-free_page.html#section_esperienze">Esperienze</a>
+                    <a href="4-free_page.html#experiences_section">Esperienze</a>
                   </li>
                 </ul>
               </div>

@@ -34,7 +34,7 @@ $(".heart-icon").click(function() {
   }
 });
 
-$(".card_1_wrapper").click(function () {
+$(".komorebi-card-wrapper").click(function () {
   if (!isHidden('.card_1_txt')) {
     return;
   }

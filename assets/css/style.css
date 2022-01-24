@@ -178,6 +178,11 @@ p {
     color: var(--gordonsGreen);
     margin: 0px;
 }
+.price {
+    font-family: Hearing;
+    font-size: 40px !important;
+}
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -218,13 +223,13 @@ p {
     background-color: var(--bluCeleste);
 }
 
-.containerKomorebi {
+.container-komorebi {
     width: calc(100vw - 40px);
     margin: 0 auto;
     position: relative;
 }
 
-.containerKomorebi-md {
+.container-komorebi-md {
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -233,7 +238,6 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
-/* TODO fare come id? */
 .icon-menu-mobile {
     height: 30px;
     filter: invert(100%) sepia(15%) saturate(487%) hue-rotate(45deg) brightness(100%) contrast(95%);
@@ -243,7 +247,7 @@ p {
     filter: invert(13%) sepia(51%) saturate(6978%) hue-rotate(186deg) brightness(95%) contrast(98%);
 }
 
-/* Overlay bg visi */
+/* Overlay bg visibile quando il menu mobile è aperto*/
 .overlay {
     display: none;
     position: fixed;
@@ -273,9 +277,7 @@ header {
     height: 50px;
     width: 100%;
     padding: 0.5rem 1rem;
-    /* max-width: 1350px; */
     justify-content: space-between;
-    /* Per centrarlo non posso usare o auto perché è fixed, quindi */
     background-color: var(--resina);
 }
 
@@ -301,7 +303,6 @@ header .logo {
 }
 
 .menu--open {
-    /* display: block; */
     animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -310,15 +311,15 @@ header .logo {
     margin-top: 60px;
 }
 
-.mobile_menu_ul {
+.mobile-menu-ul {
     padding: 0;
 }
 
-.mobile_menu_ul .sub_menu {
+.mobile-menu-ul .sub-menu {
     margin-left: 40px;
 }
 
-.mobile_menu_ul>li {
+.mobile-menu-ul>li {
     list-style: none;
     font-size: 24px;
     font-family: 'Hearing', sans-serif;
@@ -327,24 +328,18 @@ header .logo {
     height: 30px;
 }
 
-.mobile_menu_ul>li a {
+.mobile-menu-ul>li a {
     color: var(--resina);
     display: block;
 }
 
 
-.mobile_menu_ul>li.panel {
-    height: auto;
-    margin-bottom: 0;
-}
-
-
-.mobile_menu_ul>li.active .header-link {
+.mobile-menu-ul>li.active .header-link {
     color: var(--melaVerde);
     display: block;
 }
 
-.mobile_menu_ul>li span:nth-child(1) {
+.mobile-menu-ul>li span:nth-child(1) {
     display: inline-block;
     width: 10px;
     height: 20px;
@@ -352,7 +347,7 @@ header .logo {
     border-radius: 0 1px 1px 0;
 }
 
-.mobile_menu_ul>li.active>a>span:nth-child(1) {
+.mobile-menu-ul>li.active>a>span:nth-child(1) {
     background: var(--melaVerde);
 }
 
@@ -391,15 +386,17 @@ header .logo {
     background-image: url('../images/skyline.png');
     background-repeat: repeat-x;
     height: 100px;
-    /* width: 100vw; */
     width: calc(100% + 40px);
     margin-left: -20px;
     position: fixed;
     bottom: 0;
     object-fit: scale-down;
-    /* background-color: rebeccapurple; */
 }
 
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
 .footer {
     background-color: var(--gordonsGreen);
     padding-bottom: 20px;
@@ -459,7 +456,7 @@ header .logo {
     overflow: hidden;
 }
 
-.card_house_wrapper {
+.card-house-wrapper {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -527,14 +524,14 @@ header .logo {
     background: rgba(174, 220, 152, 0.8);
 }
 
-.card_1_wrapper {
+.komorebi-card-wrapper {
     position: relative;
     margin-bottom: 20px;
     cursor: pointer;
 }
 
 
-.card_1_img {
+.komorebi-card-img {
     width: 100%;
     height: 250px;
     background-color: var(--melaVerde);
@@ -543,20 +540,18 @@ header .logo {
 
 }
 
-.card_1_img img {
+.komorebi-card-img img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.card_1_txt_wrapper {
+.komorebi-card-txt-wrapper {
     padding: 25px;
     min-height: auto;
     background-color: var(--resina);
     box-shadow: 4px 4px 10px rgba(5, 10, 4, 0.1);
     padding: 40px;
-    /* position: absolute; */
-    /* top: 200px; */
     position: relative;
     width: 85%;
     margin: 0 auto;
@@ -565,26 +560,40 @@ header .logo {
     left: 0;
     right: 0;
     border-radius: var(--komorebi-border-radius);
-    /* min-height: 322px; */
 }
 
 
-.fauna_card_wrapper .card_1_txt_wrapper {
+.fauna-card-wrapper .komorebi-card-txt-wrapper {
     background-color: var(--verdeForesta);
 
 }
 
-.fauna_card_wrapper .card_1_txt_wrapper .card_1_title {
+.fauna-card-wrapper .komorebi-card-txt-wrapper .card_1_title {
     color: var(--resina);
 }
 
-.fauna_card_wrapper .card_1_txt_wrapper .card_1_txt {
+.fauna-card-wrapper .komorebi-card-txt-wrapper .card_1_txt {
     color: var(--resina);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   SWIPER                                   */
+/* -------------------------------------------------------------------------- */
 
-@media (min-width: 776px) {
-    .containerKomorebi {
+.swiper-pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+@media (min-width: 768px) {
+    .container-komorebi {
         width: calc(100vw - 80px);
         max-width: 1920px;
         /* min-height: 100vh; */
@@ -613,7 +622,7 @@ header .logo {
 }
 
 @media (min-width:992px) {
-    .containerKomorebi {
+    .container-komorebi {
         width: calc(100vw - 160px);
         max-width: 1920px;
         /* min-height: 100vh; */
@@ -682,10 +691,6 @@ header .logo {
         left: 0;
     }
 
-    #li_servizi, .panel, #btn_menu_open, #btn_menu_close {
-        display: none !important;
-    }
-
     .menu--close {
         display: block !important;
         animation: none;
@@ -720,7 +725,7 @@ header .logo {
 
     }
 
-    .mobile_menu_ul {
+    .mobile-menu-ul {
         margin: 0;
         display: flex;
         justify-content: space-between;
@@ -728,44 +733,33 @@ header .logo {
     }
 
 
-    .mobile_menu_ul>li {
+    .mobile-menu-ul>li {
         font-size: calc(0.5rem + 1vw)
     }
 
-    .mobile_menu_ul>li, .mobile_menu_ul>li.active {
+    .mobile-menu-ul>li, .mobile-menu-ul>li.active {
         display: inline-block;
         margin: 0;
         padding: 0 15px;
     }
 
-    .mobile_menu_ul>li a {
+    .mobile-menu-ul>li a {
         color: var(--bluNavy);
         /* padding: 0 30px; */
     }
 
-    .mobile_menu_ul>li.active .header-link {
+    .mobile-menu-ul>li.active .header-link {
         color: var(--verdeForesta);
     }
 
-    .mobile_menu_ul>li span:nth-child(1) {
+    .mobile-menu-ul>li span:nth-child(1) {
         display: none;
     }
 
 
-
-
-
     #saplings {
-        background-image: url('../images/skyline.png');
-        background-repeat: repeat-x;
-        height: 100px;
-        /* width: 100vw; */
         width: calc(100vw);
         margin-left: -90px;
-        position: fixed;
-        bottom: 0;
-        object-fit: scale-down;
-        /* background-color: rebeccapurple; */
     }
 
 
@@ -774,15 +768,15 @@ header .logo {
     /* -------------------------------------------------------------------------- */
 
 
-    .card_1_wrapper {
+    .komorebi-card-wrapper {
         cursor: initial;
     }
 
-    .card_1_img {
+    .komorebi-card-img {
         height: 420px;
     }
 
-    .card_1_txt_wrapper {
+    .komorebi-card-txt-wrapper {
         text-align: start;
     }
 
@@ -791,44 +785,3 @@ header .logo {
 }
 
 
-
-
-/* -------------------------------------------------------------------------- */
-/*                                    Gallery                                 */
-/* --------------------------------------------------------------------------  */
-
-.carousel-control-prev {
-    background: -webkit-linear-gradient(left, rgba(5, 10, 4, 0.8) 0, transparent 90%);
-}
-
-.carousel-control-next {
-    background: -webkit-linear-gradient(right, rgba(5, 10, 4, 0.8) 0, transparent 90%);
-}
-
-.carousel-control-prev, .carousel-control-next {
-    opacity: 1;
-    width: 18%;
-}
-
-
-.payment p {
-    font-family: 'Hearing', sans-serif;
-    font-size: 17px;
-    margin-top: -16px;
-}
-
-.text_hidden {
-    display: none;
-}
-
-.swiper-pagination {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-pagination-bullet-active {
-    width: 20px !important;
-    height: 20px !important;
-}

@@ -30,13 +30,14 @@
 <body>
   <header>
     <a href="0-home.html"><img class="logo" src="./assets/logo.png" title="Homepage" alt="logo Komorebi"></a>
-    <img id="btn_menu_open" src="assets/icons/menu.svg" alt="Menu icon" height="30" width="30" />
+    <img id="btn_menu_open" class="d-block d-lg-none" src="assets/icons/menu.svg" alt="Menu icon" height="30"
+      width="30" />
     <div class="menu menu--close" id="menu">
-      <div id="btn_menu_close" class="d-flex justify-content-end p-3 pointer">
+      <div id="btn_menu_close" class="d-flex d-lg-none justify-content-end p-3 pointer">
         <img class="icon-menu-mobile" src="./assets/icons/close.svg" alt="Icona chiudi Menu" height="30" width="30" />
       </div>
       <div class="mobile_menu_wrapper">
-        <ul class="mobile_menu_ul">
+        <ul class="mobile-menu-ul">
           <li><a class="header-link" href="0-home.html"><span></span><span>Home</span></a></li>
           <li><a class="header-link" href="1-city_description.html"><span></span><span>Esplora l'isola</span></a></li>
           <li class="d-lg-none"><a class="header-link" href="2-services_descriptions.html"><span></span><span>Vivere a
@@ -55,8 +56,8 @@
               </div>
             </div>
           </li>
-          <li class="sub_menu d-block d-lg-none" style="height: auto;">
-            <ul class="mobile_menu_ul">
+          <li class="sub-menu d-block d-lg-none" style="height: auto;">
+            <ul class="mobile-menu-ul">
               <li><a href="2-1-service_description.html"><span></span><span>La sorgente</span></a></li>
               <li><a href="2-2-service_description.html"><span></span><span>Choose to reuse</span></a>
               </li>
@@ -71,7 +72,7 @@
     </div>
   </header>
 
-  <div class="containerKomorebi pb-tree h-100vh">
+  <div class="container-komorebi pb-tree h-100vh">
     <div class="row no-gutters komorebi-mt">
       <div class="offset-0 offset-lg-1"></div>
       <div class="col-12 col-lg-11">
@@ -98,8 +99,9 @@
     <div class="d-flex justify-content-center mt-3 swiper">
       <div class="swiper-wrapper row no-gutters">
         <div class="swiper-slide col-md-4 pr-3">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img class="card-img-top" sizes="(max-width: 570px) 100vw, 570px" srcset="
+          <div class="card mb-4">
+            <img class="card-img-top"
+            loading="lazy" sizes="(max-width: 570px) 100vw, 570px" srcset="
                                     ./assets/images/explore/baobab/baobab_go040a_c_scale,w_200.png 200w,
                                     ./assets/images/explore/baobab/baobab_go040a_c_scale,w_308.png 308w,
                                     ./assets/images/explore/baobab/baobab_go040a_c_scale,w_389.png 389w,
@@ -117,15 +119,15 @@
                 Significato: accoglienza
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 100</p>
+                <p class="price text-res">€ 100</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide col-md-4 pr-3">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+          <div class="card mb-4">
+            <img class="card-img-top" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
               ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_200.jpg 200w,
               ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_931.jpg 931w,
               ./assets/images/adopt/eucalipto/eucalipto_kl7kwm_c_scale,w_1400.jpg 1400w"
@@ -140,7 +142,7 @@
                 Significato: protezione
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 75</p>
+                <p class="price text-res">€ 75</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
@@ -148,8 +150,8 @@
         </div>
 
         <div class="swiper-slide col-md-4">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+          <div class="card mb-4">
+            <img class="card-img-top" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
                 ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_200.jpg 200w,
                 ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_948.jpg 948w,
                 ./assets/images/adopt/pino/pino_rkvmek_c_scale,w_1400.jpg 1400w"
@@ -164,7 +166,7 @@
                 Significato: eternità
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 30</p>
+                <p class="price text-res">€ 30</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
@@ -172,14 +174,13 @@
         </div>
 
         <div class="swiper-slide col-md-4 pr-3">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
+          <div class="card mb-4">
 
-            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+            <img class="card-img-top" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
             ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_200.jpg 200w,
             ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_936.jpg 936w,
             ./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_1400.jpg 1400w"
               src="./assets/images/adopt/bamboo/bamboo_psnj6x_c_scale,w_1400.jpg" alt="bamboo">
-            <!-- <img src="assets/images/adopt/bamboo.jpg" class="card-img-top" alt="bamboo"> -->
             <div class="card-body text-res bg-vf">
               <div class="card-heart">
                 <h2 class="card-title">Bamboo</h2>
@@ -190,7 +191,7 @@
                 Significato: nobiltà d'animo
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 50</p>
+                <p class="price text-res">€ 50</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
@@ -198,8 +199,8 @@
         </div>
 
         <div class="swiper-slide col-md-4 pr-3">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
-            <img class="card-img-top" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+          <div class="card mb-4">
+            <img class="card-img-top" loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
             ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_200.jpg 200w,
             ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_679.jpg 679w,
             ./assets/images/adopt/acero/acero_aajmtl_c_scale,w_1000.jpg 1400w"
@@ -214,7 +215,7 @@
                 Significato: modestia
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 50</p>
+                <p class="price text-res">€ 50</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
@@ -222,9 +223,10 @@
         </div>
 
         <div class="swiper-slide col-md-4">
-          <div class="card mb-4" style="width: 100%; border-radius: 5px;overflow:hidden;">
+          <div class="card mb-4">
 
-            <img class="card-img-top" sizes="(max-width: 1064px) 100vw, 1064px" srcset="
+            <img class="card-img-top"
+            loading="lazy" sizes="(max-width: 1064px) 100vw, 1064px" srcset="
             ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_200.jpg 200w,
             ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_565.jpg 565w,
             ./assets/images/adopt/dracaena/dracaena_lfff7a_c_scale,w_1064.jpg 1064w"
@@ -239,7 +241,7 @@
                 Significato: determinazione
               </p>
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <p class="tree_price">€ 60</p>
+                <p class="price text-res">€ 60</p>
                 <button class="btn btn-secondary" data-toggle="modal" data-target="#modal-adopt">ADOTTA</button>
               </div>
             </div>
@@ -255,7 +257,7 @@
   </div>
   <div class="overlay" id="overlay"></div>
   <footer class="footer">
-    <div class="containerKomorebi py-5">
+    <div class="container-komorebi py-5">
       <div class="row no-gutters">
         <div class="footer_logo_wrapper col-12 col-lg-2 my-auto">
           <img class="logo" src="./assets/logo.png" alt="logo Komorebi">
@@ -303,10 +305,10 @@
                 <h5 class="section_title text-md-left">PRENOTA</h5>
                 <ul class="list-unstyled">
                   <li class="text-md-left mb-2">
-                    <a href="4-free_page.html#section_alloggi">Dove soggiornare</a>
+                    <a href="4-free_page.html#houses_section">Dove soggiornare</a>
                   </li>
                   <li class="text-md-left mb-2">
-                    <a href="4-free_page.html#section_esperienze">Esperienze</a>
+                    <a href="4-free_page.html#experiences_section">Esperienze</a>
                   </li>
                 </ul>
               </div>

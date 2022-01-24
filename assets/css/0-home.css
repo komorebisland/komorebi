@@ -1,19 +1,19 @@
-.main_text {
+.main-text {
     padding-top: 50px;
     margin-bottom: 16px;
 }
 
-.main_text p, .intro-big-text {
+.main-text p, .intro-big-text {
     font-family: 'Hearing', sans-serif;
     color: var(--bluNavy);
 }
 
-.main_text p:nth-child(2), .main_text p:nth-child(3) {
+.main-text p:nth-child(2), .main-text p:nth-child(3) {
     font-size: 20px;
     /* margin: 0; */
 }
 
-.main_text .intro-big-text {
+.main-text .intro-big-text {
     font-size: 70px;
     letter-spacing: 0.07rem;
 }
@@ -23,7 +23,6 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    /* z-index: 996; */
     right: 0;
     background-image: url('../images/Mong.png');
     background-size: cover;
@@ -31,20 +30,14 @@
 }
 
 
-@media (min-width:776px) {
+@media (min-width:768px) {
     .home_bg {
         width: 58.333333%;
     }
-    .main_text .intro-big-text {
+    .main-text .intro-big-text {
         font-size: calc(8rem + 7vw);
         line-height: calc(3rem + 8vw);
-        /*Remove space below the text baseline*/
         letter-spacing: 0.07rem;
     }
 
-}
-
-@media (min-width:992px) {
-
-    
 }
