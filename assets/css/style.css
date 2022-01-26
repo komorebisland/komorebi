@@ -318,7 +318,7 @@ header .logo {
 }
 
 .sub-menu {
-    height: auto;
+    height: auto !important;
 }
 
 .mobile-menu-ul .sub-menu {
