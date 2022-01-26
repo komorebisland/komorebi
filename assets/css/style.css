@@ -173,7 +173,6 @@ h3 {
 
 p {
     font-size: 16px;
-    /* font-size: 1rem; */
     line-height: 150%;
     letter-spacing: 0.02rem;
     font-family: 'Manrope', sans-serif;
@@ -390,7 +389,7 @@ header .logo {
 /* Alberi */
 #saplings {
     z-index: 997;
-    background-image: url('../images/skyline.png');
+    background-image: url('../images/saplings.png');
     background-repeat: repeat-x;
     height: 100px;
     width: calc(100% + 40px);
@@ -785,7 +784,4 @@ header .logo {
     .komorebi-card-txt-wrapper {
         text-align: start;
     }
-
-
-
 }

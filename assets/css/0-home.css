@@ -24,7 +24,7 @@
     height: 100%;
     position: absolute;
     right: 0;
-    background-image: url('../images/Mong.png');
+    background-image: url('../images/hot-air-baloon.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@
 
 @media (min-width:768px) {
     .home_bg {
-        width: 58.333333%;
+        width: 58.3%;
     }
     .main-text .intro-big-text {
         font-size: calc(8rem + 7vw);
