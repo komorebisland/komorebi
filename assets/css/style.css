@@ -99,12 +99,14 @@ html, body {
     border-color: var(--melaVerde);
     color: var(--gordonsGreen);
 }
+
 .btn-secondary.focus, .btn-secondary:focus {
     background-color: var(--melaVerde);
     border-color: var(--melaVerde);
     color: var(--gordonsGreen);
     box-shadow: 0 0 0 0.2rem rgb(174, 220, 152 / 50%) !important;
 }
+
 .btn-info {
     background-color: var(--bluCeleste);
     border-color: var(--bluCeleste);
@@ -178,6 +180,7 @@ p {
     color: var(--gordonsGreen);
     margin: 0px;
 }
+
 .price {
     font-family: Hearing;
     font-size: 40px !important;
@@ -313,6 +316,10 @@ header .logo {
 
 .mobile-menu-ul {
     padding: 0;
+}
+
+.sub-menu {
+    height: auto;
 }
 
 .mobile-menu-ul .sub-menu {
@@ -565,7 +572,6 @@ header .logo {
 
 .fauna-card-wrapper .komorebi-card-txt-wrapper {
     background-color: var(--verdeForesta);
-
 }
 
 .fauna-card-wrapper .komorebi-card-txt-wrapper .card_1_title {
@@ -783,5 +789,3 @@ header .logo {
 
 
 }
-
-
