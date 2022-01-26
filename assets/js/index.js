@@ -41,7 +41,7 @@ $(".komorebi-card-wrapper").click(function () {
 
   let name = $(this).attr('data-name');
   if (name == "felce") {
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
       <p>La <strong>Felce Verde</strong> è una pianta molto antica, che produce particolari foglie, dette
       fronde,
@@ -56,7 +56,7 @@ $(".komorebi-card-wrapper").click(function () {
 
   else if (name == "baobab")
 
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
       <p>
       Il <strong> Baobab</strong> è un albero con grandi tronchi il cui diametro può raggiungere i 7 m.
@@ -70,7 +70,7 @@ $(".komorebi-card-wrapper").click(function () {
       `
     );
   else if (name == "fioresambuco")
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
     <p>
     Il <strong>fiore di Sambuco</strong> è una delle particolarità dell'isola. A Komorebi esiste una
@@ -84,7 +84,7 @@ $(".komorebi-card-wrapper").click(function () {
     `
     );
   else if (name == "tucano")
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
     <p>
     Il <strong>tucano</strong> è un uccello originario del Sud America. Il suo nome scientifico è
@@ -98,7 +98,7 @@ $(".komorebi-card-wrapper").click(function () {
     `
     );
   else if (name == "lepre")
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
     <p>
     La <strong>lepre selvatica</strong>, detta anche lepre comune, è una specie delle leproidi
@@ -112,7 +112,7 @@ $(".komorebi-card-wrapper").click(function () {
     `
     );
   else if (name == "scimmiaRagno")
-    $("#modal_detail_body").html(
+    $("#modal-detail-body").html(
       `
     <p>
     La <strong>scimmia ragno</strong> chiamata Ateles paniscus è la scimmia più agile del mondo. I
@@ -125,7 +125,7 @@ $(".komorebi-card-wrapper").click(function () {
     </p>
     `
     );
-  $("#modal_detail").modal('show');
+  $("#modal-detail").modal('show');
 });
 
 btnMenuClose.click(() => {
