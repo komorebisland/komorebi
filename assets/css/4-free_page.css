@@ -6,6 +6,7 @@
     font-size: 17px;
     margin-top: -16px;
 }
+
 #houses-section-navigator {
     background-image: url("../images/booking/BGAlloggi.jpg");
     border-radius: 5px;
@@ -35,9 +36,14 @@
 }
 
 
-.booking_types .image_wrapper {
+.booking-types .image-wrapper {
     border-radius: var(--komorebi-border-radius);
     height: 85px;
+}
+
+.booking-types-inner-bg {
+    background: rgba(241, 248, 240, 0.5);
+    border-radius: 5px;
 }
 
 .card_img {
@@ -47,11 +53,11 @@
 }
 
 @media (min-width: 768px) {
-    .booking_types .image_wrapper {
+    .booking-types .image-wrapper {
         border-radius: var(--komorebi-border-radius);
         height: 240px;
     }
-    
+
     .card-house-wrapper {
         height: 340px;
         flex-direction: row;
@@ -66,7 +72,7 @@
 }
 
 @media (min-width: 992px) {
-    .booking_types .image_wrapper {
+    .booking-types .image-wrapper {
         height: 300px;
     }
 

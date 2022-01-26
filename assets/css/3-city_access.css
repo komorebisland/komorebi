@@ -1,4 +1,4 @@
-.means_of_transport .image_wrapper {
+.means_of_transport .image-wrapper {
     background-image: url("../images/reach_us/Sky.png");
     /* background-size: contain; */
     background-size: auto 80%;
@@ -7,7 +7,7 @@
     height: 200px;
 }
 
-.means_of_transport .image_wrapper img {
+.means_of_transport .image-wrapper img {
     max-width: 200px;
     position: absolute;
     left: 50%;
@@ -16,7 +16,7 @@
     z-index: 1
 }
 
-.means_of_transport .image_wrapper img:nth-child(2) {
+.means_of_transport .image-wrapper img:nth-child(2) {
     margin: 0 auto;
     z-index: 99;
     position: absolute;
