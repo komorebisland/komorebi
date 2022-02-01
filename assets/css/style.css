@@ -121,12 +121,6 @@ html, body {
 }
 
 
-/* .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    color: var(--resina) !important;
-    background-color: var(--melaVerde) !important;
-    border-color: var(--melaVerde) !important;
-} */
-
 .modal-header {
     border-bottom: none;
 }
